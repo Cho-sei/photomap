@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<title>photomap</title>
+		<link rel="shortcut icon" href="./icon/3185_1013052807.png" type="image/jpg">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<script type="text/javaScript" src="test.js"></script>
+
+	<body>
+		<div class="centering">
+			<h1>-古園探検記-</h1>
+
+			<div class="icon"><img src="icon/3182_1013045541.png"></div>
+
+			<div class="tabbox">
+				<input type="radio" name="tabset" id="tabcheck1" checked>
+					<label for="tabcheck1" class="tab">MAP</label>
+				<input type="radio" name="tabset" id="tabcheck2">
+					<label for="tabcheck2" class="tab">PHOTO</label>
+				<div class="tabcontent" id="tabcontent1">
+					<p><img src="texture/map.png"></p>
+					<div class="pointer" id="paira"></div>
+					<div class="pointer" id="pkirishima"></div>
+					<div class="pointer" id="pitoshima"></div>
+					<div class="pointer" id="pnoko"></div>
+					<div class="baloon" id="baira">
+						＜姶良＞<br>
+						<img src="image/aira/aira (17).jpg">
+						<img src="image/aira/aira (37).jpg">
+						<img src="image/aira/aira (48).jpg">
+					</div>
+					<div class="baloon" id="bkirishima">
+						＜霧島＞<br>
+						<img src="image/kirishima/kirishima (24).jpg">
+						<img src="image/kirishima/kirishima (41).jpg">
+						<img src="image/kirishima/kirishima (81).jpg">
+					</div>
+					<div class="baloon" id="bitoshima">
+						＜糸島＞<br>
+						<img src="image/itoshima/itoshima (2).jpg">
+						<img src="image/itoshima/itoshima (21).jpg">
+						<img src="image/itoshima/itoshima (25).jpg">
+					</div>
+					<div class="baloon" id="bnoko">
+						＜能古島＞<br>
+						<img src="image/noko/noko (22).jpg">
+						<img src="image/noko/noko (55).jpg">
+						<img src="image/noko/noko (75).jpg">
+					</div>
+				</div>
+				<div class="tabcontent" id="tabcontent2">
+					<!--<div class="flame"></div>
+					<div class="addFile"><input id="addfile" type="file" webkitdirectory directory onchange="fileListDirectory(this.files)"></div>-->
+					<div id='inputradio'></div>
+					<div class="sample">
+						<div id='labelimg'></div>
+					</div>
+					<div id='sampleimg'></div>
+				</div> 
+			</div>
+		</div>
+	</body>
+</html> 

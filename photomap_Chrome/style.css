@@ -1,0 +1,272 @@
+/* ページ上部アイコン */
+.icon{
+	position: absolute;
+	top: 20px;
+	right: 100px;
+}
+.icon img{
+	width: 125px;
+}
+
+/* ページ内タブの設定 */
+.tab{
+	display: inline-block;
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 0.75em 0.75em 0px 0px;
+	padding: 0.75em 1em;
+	font-weight: bold;
+	color: black;
+	background-color: #e0e0e0;
+}
+.tab:hover{
+	color: green;
+	background-color: #ccffcc;
+	cursor: pointer;
+}
+.tabbox input{
+	text-align: center;
+	display: none;
+}
+.tabbox input#addfile{
+	display: block;
+}
+input:checked + .tab{
+	color: red;
+	background-color: #ffffff;
+	z-index: 10;
+	position: relative;
+}
+.tabcontent{
+	width: 52em;
+	height: 50em;
+	display: none;
+	border: 1px solid black;
+	padding: 1em;
+	background-color: #ffffff;
+	margin-top: -1px;
+	z-index: 0;
+	position: relative;
+}
+#tabcontent2{
+	background-image: url('texture/p_da0760_m_da07600.jpg');
+	min-height: 500px;
+	height: auto;
+}
+p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#tabcheck1:checked~#tabcontent1{display: block;}
+#tabcheck2:checked~#tabcontent2{display: block;}
+
+/* タイトルの設定 */
+@font-face{
+	font-family: 'WebFont';
+	src:url('font/HuiFont109.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+h1{
+	font-size: 50px;
+	font-family: 'WebFont';
+}
+
+/* 背景の設定 */
+.centering{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 10px;
+}
+body{
+	margin: 10px auto;
+	background-image: url("texture/b122.jpg");
+}
+
+/* フォトページ設定 */
+.flame{
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 500px;
+	height: 350px;
+	background-color: #FFFFFF;
+	border: 10px ridge #9f9f9f;
+}
+.sample{
+	padding-top: 400px;
+}
+.sample img{
+	border: 2px solid #CCCCCC;
+	height: 50px;
+}
+.sample img:hover{
+	cursor: pointer;
+}
+.pickup{
+	display: none;
+}
+.pickup img{
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 500px;
+	height: 350px;
+	border: 5px solid #BBBBBB;
+}
+#p1:hover~#pic1{display: block;}
+#p2:hover~#pic2{display: block;}
+#p3:hover~#pic3{display: block;}
+#p4:hover~#pic4{display: block;}
+#p5:hover~#pic5{display: block;}
+#p6:hover~#pic6{display: block;}
+#p7:hover~#pic7{display: block;}
+#p8:hover~#pic8{display: block;}
+#p9:hover~#pic9{display: block;}
+#p10:hover~#pic10{display: block;}
+#p11:hover~#pic11{display: block;}
+#p12:hover~#pic12{display: block;}
+
+/* マップ上のポインタ設定 */
+.pointer{
+	background-color: red;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+}
+#paira{
+	position: absolute;
+	top: 565px;
+	left: 445px;
+}
+#pkirishima{
+	position: absolute;
+	top: 555px;
+	left: 480px;
+}
+#pitoshima{
+	position: absolute;
+	top: 210px;
+	left: 390px;
+}
+#pnoko{
+	position: absolute;
+	top: 220px;
+	left: 410px;
+}
+.pointer:hover{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+#paira:hover~#baira{display: block;}
+#pkirishima:hover~#bkirishima{display: block;}
+#pitoshima:hover~#bitoshima{display: block;}
+#pnoko:hover~#bnoko{display: block;}
+
+/* マップふきだし設定 */
+.baloon{
+	background-color: #FF9933;
+	border-radius: 20px;
+	width: 330px;
+	height:100px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	font-family: 'WebFont';
+	z-index: 1;
+	display: none;
+}
+.baloon img{
+	display: inline-block;
+	width: 100px;
+}
+#baira{
+	position: absolute;
+	top: 680px;
+	left: 20px;
+}
+#baira:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-bottom: 160px solid #FF9933;
+	transform: rotate(45deg);
+	top: -110px;
+	left: 350px;
+	z-index: -1;
+}
+#bkirishima{
+	position: absolute;
+	top: 680px;
+	left: 520px;
+}
+#bkirishima:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-bottom: 160px solid #FF9933;
+	transform: rotate(-20deg);
+	top: -110px;
+	left: -10px;
+	z-index: -1;
+}
+#bitoshima{
+	position: absolute;
+	top: 50px;
+	left: 20px;
+}
+#bitoshima:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-top: 160px solid #FF9933;
+	transform: rotate(-45deg);
+	top: 20px;
+	left: 300px;
+	z-index: -1;
+}
+#bnoko{
+	position: absolute;
+	top: 50px;
+	left: 520px;
+}
+#bnoko:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-top: 160px solid #FF9933;
+	transform: rotate(50deg);
+	top: 40px;
+	left: -40px;
+	z-index: -1;
+}
+
+/* ファイル追加ボタン */
+.addFile{
+	position: absolute;
+	top: 380px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 10px;
+	z-index: 10;
+}
