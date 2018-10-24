@@ -1,50 +1,24 @@
 import wx
 
-def click_button_1(event):
-	frame.SetStatusText('Click Button1')
+class MyApp(wx.PySimpleApp):
+    def OnInit(self):
+        Frm = wx.Frame(None, -1, 'Title', size=(500, 500))
+        pnl0 = wx.Panel(Frm, -1, size=(450, 450))
+        nb = wx.Notebook(pnl0, -1, style=wx.CLIP_CHILDREN)
 
-def click_button(event):
-	if event.GetId() == 22:
-		frame.SetStatusText('Click Button2')
-	elif event.GetId() == 33:
-		frame.SetStatusText('Click Button3') 
+        pnl1 = wx.Panel(nb, -1)
+        pnl2 = wx.Panel(nb, -1)
+        nb.AddPage(pnl1, 'Page 1')
+        nb.AddPage(pnl2, 'Page 2')
 
-application = wx.App()
+        StTxt = wx.StaticText(pnl1, -1, 'Text', pos=(20,30))
 
-frame = wx.Frame(None, wx.ID_ANY, 'testframe', size=(300,300))
-frame.SetBackgroundColour('#000000')
-frame.CreateStatusBar();
+        sizer = wx.BoxSizer(wx.VERTICAL) #追加
+        sizer.Add(nb, 1, wx.EXPAND) #追加
+        pnl0.SetSizer(sizer) #追加
 
-notebook = wx.Notebook(frame, wx.ID_ANY)
+        Frm.Show()
+        return 1
 
-title = wx.Panel(frame, wx.ID_ANY, pos=(0,0), size=(300,30))
-title.SetBackgroundColour('#0000FF')
-map = wx.Panel(notebook, wx.ID_ANY, pos=(0,30))
-map.SetBackgroundColour('#AFAFAF')
-picture = wx.Panel(notebook, wx.ID_ANY, pos=(0,30))
-picture.SetBackgroundColour('#00FF00')
-
-titletext = wx.StaticText(title, wx.ID_ANY, '-test-')
-
-button_1 = wx.Button(map, wx.ID_ANY, 'button_1')
-button_2 = wx.Button(map, 22, 'button_2')
-button_3 = wx.Button(map, 33, 'button_3')
-
-button_1.Bind(wx.EVT_BUTTON, click_button_1)
-frame.Bind(wx.EVT_BUTTON, click_button, button_2)
-frame.Bind(wx.EVT_BUTTON, click_button, button_3)
-
-layout = wx.FlexGridSizer(rows=2, cols=2)
-layout.Add(button_1,proportion=1,flag=wx.EXPAND)
-layout.Add(button_2,proportion=1,flag=wx.EXPAND)
-layout.Add(button_3,proportion=1,flag=wx.EXPAND)
-
-map.SetSizer(layout)
-
-notebook.InsertPage(0,map,'MAP')
-notebook.InsertPage(1,picture,'PICTURE')
-
-frame.Centre()
-frame.Show()
-
-application.MainLoop()
+app = MyApp()
+app.MainLoop()
